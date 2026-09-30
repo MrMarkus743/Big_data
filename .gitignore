@@ -1,0 +1,33 @@
+# Виртуальное окружение Python
+venv/
+.env
+
+# Кэш Python и компилятора
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Временные и блокирующие файлы Microsoft Office (Word, Excel)
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.tmp
+
+# Системные файлы операционных систем
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Локальные данные и логи контейнеров (для Neo4j и других баз)
+neo4j_data/
+neo4j_logs/
+*.log
+
+# Логи и временные файлы Dask
+.dask/
+dask-worker-space/
+
+# Локальные файлы настроек редактора
+.vscode/
+.idea/
