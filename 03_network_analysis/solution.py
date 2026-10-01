@@ -8,7 +8,7 @@ import pandas as pd
 current_dir = Path(__file__).resolve().parent
 data_path = current_dir / "data" / "variant_1.csv"
 
-# Если файл лежит рядом без папки data, проверяем и этот путь
+# Проверяем наличие файла в директории исполняемого кода
 if not data_path.exists():
     data_path = current_dir / "variant_1.csv"
 
