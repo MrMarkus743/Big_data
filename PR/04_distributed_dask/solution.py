@@ -20,9 +20,7 @@ print(f"Поиск файла данных: {excel_path}")
 # 2. Задача 1.1: Расчет скользящей средней по урожайности регионов
 def process_crop_yield_series(file_path: Path) -> None:
     """Загрузка урожайности, расчет скользящего среднего в Dask и сохранение графика."""
-    print("\n" + "=" * 60)
     print("ЗАДАЧА 1.1: АНАЛИЗ УРОЖАЙНОСТИ И СКОЛЬЗЯЩЕЙ СРЕДНЕЙ")
-    print("=" * 60)
 
     # Чтение Excel через Pandas и конвертация в Dask DataFrame
     pdf = pd.read_excel(file_path)
@@ -82,9 +80,7 @@ def process_crop_yield_series(file_path: Path) -> None:
 # 3. Задача 1.2: Профилирование и устранение антипаттернов Dask
 def run_profiling_benchmark() -> None:
     """Сравнение времени работы антипаттерна (compute внутри) и оптимизированной версии."""
-    print("\n" + "=" * 60)
     print("ЗАДАЧА 1.2: ПРОФИЛИРОВАНИЕ И СРАВНЕНИЕ ПРОИЗВОДИТЕЛЬНОСТИ DASK")
-    print("=" * 60)
 
     # Генерация синтетического набора данных
     n_rows = 150_000
@@ -119,11 +115,9 @@ def run_profiling_benchmark() -> None:
 
     # Расчет ускорения
     speedup = ((time_bad - time_good) / time_bad) * 100
-    print("\n" + "-" * 40)
     print(f"Итоговое ускорение: {speedup:.1f}%")
     print(f"Экономия процессорного времени: {time_bad - time_good:.4f} сек")
-    print("-" * 40)
-
+    
     # Удаление временного тестового файла
     if test_csv.exists():
         test_csv.unlink()
