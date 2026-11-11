@@ -174,6 +174,10 @@ def main() -> None:
         best_model, tune_time = hyperparameter_tuning(X_train, y_train)
         accuracy = evaluate_model(best_model, X_test, y_test)
         visualize_results(accuracy, train_time, tune_time)
+
+    except Exception as e:
+        print(f'Произошла ошибка {e}')
+
     finally:
         client.close()
         print("\nКластер Dask успешно остановлен.")
